@@ -14,6 +14,9 @@ int main() {
     int userAgeAsInt;
     std::string userAgeAsString;
 
+    // declare constants
+    const int MAX_AGE = 40, MIN_AGE = 25;
+
     // get the user's age
     std::cout << "Enter your age: ";
     std::cin >> userAgeAsString;
@@ -22,9 +25,9 @@ int main() {
         userAgeAsInt = std::stoi(userAgeAsString);
 
         // display whether they are eligible to date or not
-        if (userAgeAsInt > 25 && userAgeAsInt < 40) {
+        if (userAgeAsInt > MIN_AGE && userAgeAsInt < MAX_AGE) {
             std::cout << "You are allowed to date our grandchild.\n";
-        } else if (userAgeAsInt > 40) {
+        } else if (userAgeAsInt >= MAX_AGE) {
             std::cout << "You are too old for our grandchild.\n";
         } else if (userAgeAsInt < 0) {
             std::cout << "Age cannot be a negative number.\n";
