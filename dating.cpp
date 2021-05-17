@@ -10,7 +10,7 @@
 #include <string>
 
 int main() {
-    // decalre variable
+    // declare variable
     int userAgeAsInt;
     std::string userAgeAsString;
 
